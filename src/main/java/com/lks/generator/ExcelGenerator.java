@@ -3,6 +3,9 @@ package com.lks.generator;
 import com.lks.core.PortfolioModel;
 import com.lks.models.User;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.IndexedColors;
+import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -31,6 +34,18 @@ public class ExcelGenerator {
         createHeader(spreadsheet);
         //Create row object
         XSSFRow row;
+
+
+        XSSFFont defaultFont= workbook.createFont();
+        defaultFont.setFontHeightInPoints((short)10);
+        defaultFont.setFontName("Arial");
+        defaultFont.setColor(IndexedColors.BLACK.getIndex());
+        defaultFont.setBold(false);
+        defaultFont.setItalic(false);
+
+
+
+
         //Iterate over data and write to sheet
         int rowid = 1;
         Map<String, Object[]> mapOfInvestments = createMapOfInvestments(portfolioModelList);
@@ -81,12 +96,20 @@ public class ExcelGenerator {
     private void createHeader(XSSFSheet spreadSheet){
 
         XSSFRow row = spreadSheet.createRow(0);
+        CellStyle style=null;
         String[] headers = {"Stock Name", "Closing Price", "Change","Quantity","Invested Price","Day's Gain Value","Day's Gain %","Overall Gain Value","Overall Gain %","Total Value"};
         int cellId = 0;
         for(String headerName : headers) {
             Cell cell = row.createCell(cellId++);
             cell.setCellValue(headerName);
         }
+
+        style=row.getRowStyle();
+        style.setFillPattern(CellStyle.SOLID_FOREGROUND);
+        style.setAlignment(CellStyle.ALIGN_CENTER);
+        style.setFont(getFont(spreadSheet.getWorkbook()));
+
+
     }
 
     private Map<String, Object[]> createMapOfInvestments(List<PortfolioModel> portfolioModelList) {
@@ -107,6 +130,18 @@ public class ExcelGenerator {
         }
         return data;
     }
+
+    private XSSFFont getFont(XSSFWorkbook workbook){
+        XSSFFont font= workbook.createFont();
+        font.setFontHeightInPoints((short)10);
+        font.setFontName("Arial");
+        font.setColor(IndexedColors.BLACK.getIndex());
+        font.setBold(true);
+        font.setItalic(false);
+        return font;
+    }
+
+
 
 
 

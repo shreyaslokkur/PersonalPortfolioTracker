@@ -25,6 +25,8 @@
         <module name="ppt" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ppt" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
-
