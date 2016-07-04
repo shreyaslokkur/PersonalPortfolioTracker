@@ -2,37 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" name="Default" comment="">
-<<<<<<< HEAD
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lks/core/BeanConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/lks/core/PPTException.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_quartz_scheduler_quartz_2_1_5.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lks/core/PortfolioGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/lks/generator/PortfolioGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lks/parser/CSVParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/lks/parser/CSVParser.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_8_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ppt.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavTrigger.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/.~lock.1.xlsx#" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/portfolios/1.xls" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/portfolios/1.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/portfolios/2.xls" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/portfolios/2.xlsx" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lks/core/BeanConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/lks/BeanConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavDownloadJob.java" afterPath="$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavDownloadJob.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lks/generator/ExcelGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/lks/generator/ExcelGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java" afterPath="$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lks/PersonalPortfolioTrackerApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/lks/PersonalPortfolioTrackerApplication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/lks/PersonalPortfolioTrackerApplicationTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/lks/PersonalPortfolioTrackerApplicationTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1_0__ddl_init.sql" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1_0__ddl_init.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bhav.csv" afterPath="$PROJECT_DIR$/static/bhav.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ppt.iml" afterPath="$PROJECT_DIR$/ppt.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-=======
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ppt.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path=".idea/dataSources.local.xml" />
-    <file path="/Dummy.txt" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467476211089" ignored="false" />
-    <file path="$PROJECT_DIR$/src/main/java/com/lks/notifications/EmailNotification.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467469395880" ignored="false" />
-    <file path="/NSEBhavScraper.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467478504158" ignored="false" />
+    <file path="/Dummy.txt" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467634075746" ignored="false" />
+    <file path="$PROJECT_DIR$/src/main/java/com/lks/notifications/EmailNotification.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467633850420" ignored="false" />
+    <file path="/NSEBhavScraper.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467649441188" ignored="false" />
     <file path="/PPTException.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467470337630" ignored="false" />
     <file path="/CSVParser.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467473484248" ignored="false" />
-    <file path="/BhavDownloadJob.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467474383152" ignored="false" />
+    <file path="/BhavDownloadJob.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467649046562" ignored="false" />
     <file path="/a.dummy" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467474396823" ignored="false" />
-    <file path="/PersonalPortfolioTrackerApplication.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467477081074" ignored="false" />
+    <file path="/PersonalPortfolioTrackerApplication.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467649088681" ignored="false" />
     <file path="/PortfolioGenerator.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467479286150" ignored="false" />
+    <file path="/PersonalPortfolioTrackerApplicationTests.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467637740488" ignored="false" />
+    <file path="/fragment.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467637406058" ignored="false" />
+    <file path="/ExcelGenerator.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467640611679" ignored="false" />
+    <file path="/BhavTrigger.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467648294032" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +54,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java" line="49" class="com.lks.scraper.NSEBhavScraper" package="com.lks.scraper">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java" line="43" class="com.lks.scraper.NSEBhavScraper" package="com.lks.scraper">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -63,7 +69,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java" line="91" class="com.lks.scraper.NSEBhavScraper" package="com.lks.scraper">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java" line="93" class="com.lks.scraper.NSEBhavScraper" package="com.lks.scraper">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -78,7 +84,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java" line="95" class="com.lks.scraper.NSEBhavScraper" package="com.lks.scraper">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java" line="97" class="com.lks.scraper.NSEBhavScraper" package="com.lks.scraper">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -108,7 +114,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java" line="56" class="com.lks.scraper.NSEBhavScraper" package="com.lks.scraper">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java" line="58" class="com.lks.scraper.NSEBhavScraper" package="com.lks.scraper">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -123,22 +129,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java" line="66" class="com.lks.scraper.NSEBhavScraper" package="com.lks.scraper">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/test/java/com/lks/PersonalPortfolioTrackerApplicationTests.java" line="97" class="com.lks.PersonalPortfolioTrackerApplicationTests" package="com.lks">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java" line="68" class="com.lks.scraper.NSEBhavScraper" package="com.lks.scraper">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -154,21 +145,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/test/java/com/lks/PersonalPortfolioTrackerApplicationTests.java" line="60" class="com.lks.PersonalPortfolioTrackerApplicationTests" package="com.lks">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/lks/generator/ExcelGenerator.java" line="56" class="com.lks.generator.ExcelGenerator" package="com.lks.generator">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -213,7 +189,52 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/lks/generator/ExcelGenerator.java" line="36" class="com.lks.generator.ExcelGenerator" package="com.lks.generator">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/lks/generator/ExcelGenerator.java" line="80" class="com.lks.generator.ExcelGenerator" package="com.lks.generator">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/lks/generator/ExcelGenerator.java" line="82" class="com.lks.generator.ExcelGenerator" package="com.lks.generator">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/lks/generator/ExcelGenerator.java" line="98" class="com.lks.generator.ExcelGenerator" package="com.lks.generator">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/lks/generator/ExcelGenerator.java" line="100" class="com.lks.generator.ExcelGenerator" package="com.lks.generator">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -275,12 +296,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-<<<<<<< HEAD
-      <file leaf-file-name="ExcelGenerator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ExcelGenerator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/generator/ExcelGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="71" selection-start="4819" selection-end="4819" vertical-scroll-proportion="0.87202924">
-              <folding />
+            <state line="74" column="127" selection-start="2375" selection-end="2375" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#904#913#0" expanded="true" />
+                <element signature="e#1148#1157#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersonalPortfolioTrackerApplicationTests.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/lks/PersonalPortfolioTrackerApplicationTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="4" selection-start="972" selection-end="1007" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#2463#2479#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -288,35 +322,16 @@
       <file leaf-file-name="PortfolioGenerator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/generator/PortfolioGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="91" selection-start="4685" selection-end="4685" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1651#1679#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CSVParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/parser/CSVParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="10" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.0">
-=======
-      <file leaf-file-name="V1_0__ddl_init.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1_0__ddl_init.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="986">
-              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
+            <state line="79" column="0" selection-start="2957" selection-end="2957" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="PersonalPortfolioTrackerApplication.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PersonalPortfolioTrackerApplication.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/PersonalPortfolioTrackerApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="10" selection-start="1989" selection-end="1989" vertical-scroll-proportion="0.0">
+            <state line="24" column="0" selection-start="949" selection-end="949" vertical-scroll-proportion="0.32142857">
               <folding />
             </state>
           </provider>
@@ -325,40 +340,36 @@
       <file leaf-file-name="NSEBhavScraper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="72" selection-start="4714" selection-end="4714" vertical-scroll-proportion="0.0">
-              <folding />
-=======
-      <file leaf-file-name="PersonalPortfolioTrackerApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/PersonalPortfolioTrackerApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="1173">
-              <caret line="34" column="50" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="50" />
+            <state line="53" column="33" selection-start="1750" selection-end="1750" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1626#1627#0" expanded="false" />
-                <element signature="e#1664#1665#0" expanded="false" />
-                <element signature="e#1723#1724#0" expanded="false" />
-                <element signature="e#1766#1767#0" expanded="false" />
-                <element signature="e#1831#1832#0" expanded="false" />
-                <element signature="e#1877#1878#0" expanded="false" />
-                <element signature="e#1936#1937#0" expanded="false" />
-                <element signature="e#1979#1980#0" expanded="false" />
-                <element signature="e#2046#2047#0" expanded="false" />
-                <element signature="e#2093#2094#0" expanded="false" />
-                <element signature="e#2154#2155#0" expanded="false" />
-                <element signature="e#2198#2199#0" expanded="false" />
-                <element signature="e#2259#2260#0" expanded="false" />
-                <element signature="e#2299#2300#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="BeanConfiguration.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/core/BeanConfiguration.java">
+      <file leaf-file-name="InvestmentsDao.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/models/dao/InvestmentsDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="5" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.0">
+            <state line="15" column="17" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="V1_0__ddl_init.sql" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1_0__ddl_init.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="17" selection-start="992" selection-end="992" vertical-scroll-proportion="-9.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BeanConfiguration.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/BeanConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="5" selection-start="517" selection-end="1233" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -367,14 +378,7 @@
       <file leaf-file-name="BhavDownloadJob.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavDownloadJob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="51" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.0">
-=======
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5338164" vertical-offset="0" max-vertical-offset="414">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
+            <state line="38" column="10" selection-start="1486" selection-end="1486" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -390,40 +394,28 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-<<<<<<< HEAD
   <component name="GitLogSettings">
     <option name="myDateState">
       <MyDateState />
     </option>
   </component>
-=======
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavTrigger.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lks/core/PPTException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lks/parser/CSVParser.java" />
-=======
-        <option value="$PROJECT_DIR$/src/main/java/com/lks/generator/ExcelGenerator.java" />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
-        <option value="$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavDownloadJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lks/core/BeanConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lks/PersonalPortfolioTrackerApplication.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lks/generator/PortfolioGenerator.java" />
-=======
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1_0__ddl_init.sql" />
+        <option value="$PROJECT_DIR$/src/test/java/com/lks/PersonalPortfolioTrackerApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lks/generator/ExcelGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavTrigger.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
+        <option value="$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavDownloadJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lks/PersonalPortfolioTrackerApplication.java" />
       </list>
     </option>
-  </component>
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -455,11 +447,11 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1855" />
-    <option name="height" value="1056" />
+    <option name="height" value="1084" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -487,11 +479,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-<<<<<<< HEAD
-=======
-      <pane id="Scope" />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -520,11 +507,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-<<<<<<< HEAD
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ppt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PersonalPortfolioTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="portfolios" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ppt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PersonalPortfolioTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="ppt" />
@@ -540,6 +570,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ppt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PersonalPortfolioTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migration" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -625,7 +685,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="parser" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -655,7 +715,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="generator" />
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -692,85 +756,26 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-=======
-        </subPane>
-      </pane>
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="dynamic.classpath" value="false" />
-<<<<<<< HEAD
-=======
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="FullScreen" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.splitter.details.proportions" value="0.2" />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\lokkur\Sandbox\codebase\PersonalPortfolioTracker\src\main\resources\db" />
-      <recent name="C:\Users\lokkur\Sandbox\codebase\PersonalPortfolioTracker\src\main\resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/static" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.lks.models" />
-      <recent name="com.lks.models.dao" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.lks" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PersonalPortfolioTrackerApplicationTests.testCSVScraping">
-    <configuration default="false" name="PersonalPortfolioTrackerApplicationTests.testCSVParsing" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.lks.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="ppt" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.lks" />
-      <option name="MAIN_CLASS_NAME" value="com.lks.PersonalPortfolioTrackerApplicationTests" />
-      <option name="METHOD_NAME" value="testCSVParsing" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.PersonalPortfolioTrackerApplication">
     <configuration default="false" name="PersonalPortfolioTrackerApplicationTests.testCSVScraping" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -896,7 +901,31 @@
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PersonalPortfolioTrackerApplication" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.lks.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.lks.PersonalPortfolioTrackerApplication" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ppt" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -1025,20 +1054,7 @@
       <listeners />
       <method />
     </configuration>
-<<<<<<< HEAD
     <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" output_log_level="null" package_name="" scope="Class">
-=======
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <pass-parent-envs>true</pass-parent-envs>
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
       <option name="BCName" value="" />
       <option name="launcherParameters">
         <LauncherParameters>
@@ -1133,19 +1149,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.testCSVParsing" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.testCSVScraping" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.testSendEmail" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.textExcelGeneration" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.testPortfolioGeneration" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.testCSVScraping" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.testSendEmail" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.textExcelGeneration" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.testPortfolioGeneration" />
+      <item index="4" class="java.lang.String" itemvalue="Application.PersonalPortfolioTrackerApplication" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.testCSVScraping" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.testSendEmail" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.testPortfolioGeneration" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.textExcelGeneration" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.testCSVParsing" />
+        <item index="0" class="java.lang.String" itemvalue="Application.PersonalPortfolioTrackerApplication" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.testPortfolioGeneration" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.testCSVScraping" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.testSendEmail" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.PersonalPortfolioTrackerApplicationTests.textExcelGeneration" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1154,101 +1170,50 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SliceManager">
-    <option name="analysisUIOptions">
-      <AnalysisUIOptions />
-    </option>
-  </component>
-  <component name="SvnConfiguration" myUseAcceleration="nothing">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" name="Default" comment="" />
       <created>1466766300597</created>
       <updated>1466766300597</updated>
-      <workItem from="1467359456369" duration="9574000" />
-      <workItem from="1467618618797" duration="267000" />
+      <workItem from="1467359456369" duration="5410000" />
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9841000" />
-  </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
-    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32937366" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-=======
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
-    <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-=======
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32999444" sideWeight="0.67062634" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277487" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24986088" sideWeight="0.67062634" order="0" side_tool="false" content_ui="combo" />
-=======
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25053304" sideWeight="0.67170626" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4251309" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42440605" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-<<<<<<< HEAD
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42486486" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32756758" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937366" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-  </component>
-  <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USER_GROUPS">
-      <collection />
-    </option>
-    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-      <collection />
-    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1317,604 +1282,114 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/models/dao/EquitiesDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1_0__ddl_init.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="986">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/PersonalPortfolioTrackerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="1173">
-          <caret line="34" column="50" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="50" />
-          <folding>
-            <element signature="e#1626#1627#0" expanded="false" />
-            <element signature="e#1664#1665#0" expanded="false" />
-            <element signature="e#1723#1724#0" expanded="false" />
-            <element signature="e#1766#1767#0" expanded="false" />
-            <element signature="e#1831#1832#0" expanded="false" />
-            <element signature="e#1877#1878#0" expanded="false" />
-            <element signature="e#1936#1937#0" expanded="false" />
-            <element signature="e#1979#1980#0" expanded="false" />
-            <element signature="e#2046#2047#0" expanded="false" />
-            <element signature="e#2093#2094#0" expanded="false" />
-            <element signature="e#2154#2155#0" expanded="false" />
-            <element signature="e#2198#2199#0" expanded="false" />
-            <element signature="e#2259#2260#0" expanded="false" />
-            <element signature="e#2299#2300#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/notifications/EmailNotification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3026" max-vertical-offset="4029">
-          <caret line="178" column="80" selection-start-line="178" selection-start-column="80" selection-end-line="178" selection-end-column="80" />
-          <folding>
-            <element signature="e#7642#7643#0" expanded="false" />
-            <element signature="e#7681#7682#0" expanded="false" />
-            <element signature="e#7734#7735#0" expanded="false" />
-            <element signature="e#7782#7783#0" expanded="false" />
-            <element signature="e#7826#7827#0" expanded="false" />
-            <element signature="e#7869#7870#0" expanded="false" />
-            <element signature="e#7930#7931#0" expanded="false" />
-            <element signature="e#7986#7987#0" expanded="false" />
-            <element signature="e#8029#8030#0" expanded="false" />
-            <element signature="e#8071#8072#0" expanded="false" />
-            <element signature="e#8130#8131#0" expanded="false" />
-            <element signature="e#8184#8185#0" expanded="false" />
-            <element signature="e#8234#8235#0" expanded="false" />
-            <element signature="e#8283#8284#0" expanded="false" />
-            <element signature="e#8356#8357#0" expanded="false" />
-            <element signature="e#8424#8425#0" expanded="false" />
-            <element signature="e#8475#8476#0" expanded="false" />
-            <element signature="e#8525#8526#0" expanded="false" />
-            <element signature="e#8718#8719#0" expanded="false" />
-            <element signature="e#8765#8766#0" expanded="false" />
-            <element signature="e#8834#8835#0" expanded="false" />
-            <element signature="e#8898#8899#0" expanded="false" />
-            <element signature="e#8947#8948#0" expanded="false" />
-            <element signature="e#8995#8996#0" expanded="false" />
-            <element signature="e#9066#9067#0" expanded="false" />
-            <element signature="e#9132#9133#0" expanded="false" />
-            <element signature="e#9182#9183#0" expanded="false" />
-            <element signature="e#9231#9232#0" expanded="false" />
-            <element signature="e#9304#9305#0" expanded="false" />
-            <element signature="e#9372#9373#0" expanded="false" />
-            <element signature="e#9419#9420#0" expanded="false" />
-            <element signature="e#9465#9466#0" expanded="false" />
-            <element signature="e#9532#9533#0" expanded="false" />
-            <element signature="e#9594#9595#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/generator/ExcelGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="1853">
-          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3959#3977#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/core/PortfolioModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1173">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/lks/PersonalPortfolioTrackerApplicationTests.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1496">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/models/Investments.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/core/PPTException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1292">
-          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
+        <state line="15" column="31" selection-start="363" selection-end="363" vertical-scroll-proportion="0.4509018" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/parser/CSVParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="10" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/core/PortfolioGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1496" max-vertical-offset="2057">
-          <caret line="104" column="81" selection-start-line="104" selection-start-column="81" selection-end-line="104" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/models/dao/EquitiesDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="374">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/models/Equities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1275">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bhav.csv">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/models/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="18" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state line="14" column="17" selection-start="319" selection-end="319" vertical-scroll-proportion="0.34957626">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/models/dao/InvestmentsDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="16" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/core/StockAveragedInvestmentModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="21" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="86" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/parser/CSVParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6309751" vertical-offset="0" max-vertical-offset="0">
-          <caret line="35" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/models/Investments.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1292">
-          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/models/dao/EquitiesDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24637681" vertical-offset="0" max-vertical-offset="897">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-        </state>
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/models/Equities.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#695#696#0" expanded="false" />
-            <element signature="e#720#721#0" expanded="false" />
-            <element signature="e#753#754#0" expanded="false" />
-            <element signature="e#781#782#0" expanded="false" />
-            <element signature="e#816#817#0" expanded="false" />
-            <element signature="e#850#851#0" expanded="false" />
-            <element signature="e#901#902#0" expanded="false" />
-            <element signature="e#947#948#0" expanded="false" />
-            <element signature="e#984#985#0" expanded="false" />
-            <element signature="e#1017#1018#0" expanded="false" />
-            <element signature="e#1069#1070#0" expanded="false" />
-            <element signature="e#1113#1114#0" expanded="false" />
-            <element signature="e#1146#1147#0" expanded="false" />
-            <element signature="e#1175#1176#0" expanded="false" />
-            <element signature="e#1219#1220#0" expanded="false" />
-            <element signature="e#1255#1256#0" expanded="false" />
-            <element signature="e#1295#1296#0" expanded="false" />
-            <element signature="e#1331#1332#0" expanded="false" />
-            <element signature="e#1389#1390#0" expanded="false" />
-            <element signature="e#1439#1440#0" expanded="false" />
-            <element signature="e#1472#1473#0" expanded="false" />
-            <element signature="e#1501#1502#0" expanded="false" />
-            <element signature="e#1545#1546#0" expanded="false" />
-            <element signature="e#1581#1582#0" expanded="false" />
-            <element signature="e#1614#1615#0" expanded="false" />
-            <element signature="e#1646#1647#0" expanded="false" />
-            <element signature="e#1693#1694#0" expanded="false" />
-            <element signature="e#1735#1736#0" expanded="false" />
-            <element signature="e#1768#1769#0" expanded="false" />
-            <element signature="e#1800#1801#0" expanded="false" />
-            <element signature="e#1847#1848#0" expanded="false" />
-            <element signature="e#1889#1890#0" expanded="false" />
-          </folding>
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1275">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bhav.csv">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="27744">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/notifications/EmailNotification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#7642#7643#0" expanded="false" />
-            <element signature="e#7681#7682#0" expanded="false" />
-            <element signature="e#7734#7735#0" expanded="false" />
-            <element signature="e#7782#7783#0" expanded="false" />
-            <element signature="e#7826#7827#0" expanded="false" />
-            <element signature="e#7869#7870#0" expanded="false" />
-            <element signature="e#7930#7931#0" expanded="false" />
-            <element signature="e#7986#7987#0" expanded="false" />
-            <element signature="e#8029#8030#0" expanded="false" />
-            <element signature="e#8071#8072#0" expanded="false" />
-            <element signature="e#8130#8131#0" expanded="false" />
-            <element signature="e#8184#8185#0" expanded="false" />
-            <element signature="e#8234#8235#0" expanded="false" />
-            <element signature="e#8283#8284#0" expanded="false" />
-            <element signature="e#8356#8357#0" expanded="false" />
-            <element signature="e#8424#8425#0" expanded="false" />
-            <element signature="e#8475#8476#0" expanded="false" />
-            <element signature="e#8525#8526#0" expanded="false" />
-            <element signature="e#8718#8719#0" expanded="false" />
-            <element signature="e#8765#8766#0" expanded="false" />
-            <element signature="e#8834#8835#0" expanded="false" />
-            <element signature="e#8898#8899#0" expanded="false" />
-            <element signature="e#8947#8948#0" expanded="false" />
-            <element signature="e#8995#8996#0" expanded="false" />
-            <element signature="e#9066#9067#0" expanded="false" />
-            <element signature="e#9132#9133#0" expanded="false" />
-            <element signature="e#9182#9183#0" expanded="false" />
-            <element signature="e#9231#9232#0" expanded="false" />
-            <element signature="e#9304#9305#0" expanded="false" />
-            <element signature="e#9372#9373#0" expanded="false" />
-            <element signature="e#9419#9420#0" expanded="false" />
-            <element signature="e#9465#9466#0" expanded="false" />
-            <element signature="e#9532#9533#0" expanded="false" />
-            <element signature="e#9594#9595#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/core/PortfolioModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#581#582#0" expanded="false" />
-            <element signature="e#613#614#0" expanded="false" />
-            <element signature="e#663#664#0" expanded="false" />
-            <element signature="e#705#706#0" expanded="false" />
-            <element signature="e#744#745#0" expanded="false" />
-            <element signature="e#779#780#0" expanded="false" />
-            <element signature="e#835#836#0" expanded="false" />
-            <element signature="e#883#884#0" expanded="false" />
-            <element signature="e#916#917#0" expanded="false" />
-            <element signature="e#945#946#0" expanded="false" />
-            <element signature="e#989#990#0" expanded="false" />
-            <element signature="e#1025#1026#0" expanded="false" />
-            <element signature="e#1057#1058#0" expanded="false" />
-            <element signature="e#1088#1089#0" expanded="false" />
-            <element signature="e#1133#1134#0" expanded="false" />
-            <element signature="e#1173#1174#0" expanded="false" />
-            <element signature="e#1213#1214#0" expanded="false" />
-            <element signature="e#1249#1250#0" expanded="false" />
-            <element signature="e#1307#1308#0" expanded="false" />
-            <element signature="e#1357#1358#0" expanded="false" />
-            <element signature="e#1397#1398#0" expanded="false" />
-            <element signature="e#1433#1434#0" expanded="false" />
-            <element signature="e#1491#1492#0" expanded="false" />
-            <element signature="e#1541#1542#0" expanded="false" />
-            <element signature="e#1586#1587#0" expanded="false" />
-            <element signature="e#1627#1628#0" expanded="false" />
-            <element signature="e#1695#1696#0" expanded="false" />
-            <element signature="e#1755#1756#0" expanded="false" />
-            <element signature="e#1798#1799#0" expanded="false" />
-            <element signature="e#1837#1838#0" expanded="false" />
-            <element signature="e#1901#1902#0" expanded="false" />
-            <element signature="e#1957#1958#0" expanded="false" />
-            <element signature="e#2005#2006#0" expanded="false" />
-            <element signature="e#2049#2050#0" expanded="false" />
-            <element signature="e#2226#2227#0" expanded="false" />
-            <element signature="e#2259#2260#0" expanded="false" />
-            <element signature="e#2311#2312#0" expanded="false" />
-            <element signature="e#2355#2356#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1173">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavTrigger.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-=======
-        <state vertical-scroll-proportion="0.5022625" vertical-offset="1137" max-vertical-offset="2057">
-          <caret line="109" column="42" selection-start-line="109" selection-start-column="42" selection-end-line="109" selection-end-column="42" />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/lks/PersonalPortfolioTrackerApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.33266532">
+        <state line="15" column="17" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/core/PPTException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/BeanConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="31" selection-start="363" selection-end="363" vertical-scroll-proportion="0.4509018">
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavDownloadJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67460316" vertical-offset="0" max-vertical-offset="504">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavTrigger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.640873" vertical-offset="0" max-vertical-offset="504">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/lks/PersonalPortfolioTrackerApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="529" max-vertical-offset="1496">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/parser/CSVParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="10" selection-start="2727" selection-end="2727" vertical-scroll-proportion="0.0">
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7494737" vertical-offset="35" max-vertical-offset="510">
-          <caret line="23" column="42" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.640873" vertical-offset="1564" max-vertical-offset="2380">
-          <caret line="111" column="47" selection-start-line="111" selection-start-column="47" selection-end-line="111" selection-end-column="47" />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
+        <state line="52" column="5" selection-start="517" selection-end="1233" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1_0__ddl_init.sql">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="29" column="51" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/core/BeanConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="5" selection-start="1276" selection-end="1276" vertical-scroll-proportion="0.0">
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="986">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/PersonalPortfolioTrackerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state line="48" column="10" selection-start="1989" selection-end="1989" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="72" selection-start="4714" selection-end="4714" vertical-scroll-proportion="0.0">
+        <state line="30" column="17" selection-start="992" selection-end="992" vertical-scroll-proportion="-9.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/generator/PortfolioGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="91" selection-start="4685" selection-end="4685" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1651#1679#0" expanded="true" />
-          </folding>
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="1173">
-          <caret line="34" column="50" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="50" />
-          <folding>
-            <element signature="e#1626#1627#0" expanded="false" />
-            <element signature="e#1664#1665#0" expanded="false" />
-            <element signature="e#1723#1724#0" expanded="false" />
-            <element signature="e#1766#1767#0" expanded="false" />
-            <element signature="e#1831#1832#0" expanded="false" />
-            <element signature="e#1877#1878#0" expanded="false" />
-            <element signature="e#1936#1937#0" expanded="false" />
-            <element signature="e#1979#1980#0" expanded="false" />
-            <element signature="e#2046#2047#0" expanded="false" />
-            <element signature="e#2093#2094#0" expanded="false" />
-            <element signature="e#2154#2155#0" expanded="false" />
-            <element signature="e#2198#2199#0" expanded="false" />
-            <element signature="e#2259#2260#0" expanded="false" />
-            <element signature="e#2299#2300#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5338164" vertical-offset="0" max-vertical-offset="414">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state line="79" column="0" selection-start="2957" selection-end="2957" vertical-scroll-proportion="0.0">
           <folding />
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/generator/ExcelGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="71" selection-start="4819" selection-end="4819" vertical-scroll-proportion="0.87202924">
+        <state line="74" column="127" selection-start="2375" selection-end="2375" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#904#913#0" expanded="true" />
+            <element signature="e#1148#1157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/lks/PersonalPortfolioTrackerApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="4" selection-start="972" selection-end="1007" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2463#2479#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="33" selection-start="1750" selection-end="1750" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavDownloadJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="10" selection-start="1486" selection-end="1486" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/PersonalPortfolioTrackerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="949" selection-end="949" vertical-scroll-proportion="0.32142857">
           <folding />
         </state>
       </provider>
     </entry>
   </component>
-<<<<<<< HEAD
 </project>
 
-=======
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>ppt</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
-  </component>
-</project>
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29

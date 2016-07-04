@@ -95,6 +95,10 @@ public class PersonalPortfolioTrackerApplicationTests {
     public void testPortfolioGeneration() {
         Map<String, BhavModel> bhavModelMap = csvParser.parseCSV();
         Map<User, List<PortfolioModel>> userListMap = portfolioGenerator.generatePortfolioForAllUsers(bhavModelMap);
+        for(User user : userListMap.keySet()) {
+            excelGenerator.generateExcel(userListMap.get(user), user);
+        }
+
         Assert.assertNotNull(userListMap);
     }
 

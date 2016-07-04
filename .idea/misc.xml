@@ -46,7 +46,7 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
-  <component name="IdProvider" IDEtalkID="91F6E05DDD2D90A49DE8E32DEC688522" />
+  <component name="IdProvider" IDEtalkID="BC6769A32342E0096373DFECDBA80A47" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -64,14 +64,7 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
-<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-=======
-  <component name="ProjectModuleManager">
-    <modules />
-  </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
->>>>>>> 6a295518cec057f9a5e9029d5f92a7924fe93a29
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="RunManager">

@@ -1,12 +1,6 @@
 package com.lks.scraper;
 
 import com.lks.core.PPTException;
-import org.jsoup.Connection;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
 import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -51,12 +45,20 @@ public class NSEBhavScraper {
         File file = unZipIt();
         deleteOldCSVBhavFile();
         renameUnzippedFile(file.getName());
+        deleteZipFile();
+    }
+
+    private void deleteZipFile() {
+        File zipBhavFile = new File(zipFile);
+        if(zipBhavFile.exists()) {
+            zipBhavFile.delete();
+        }
     }
 
     private void renameUnzippedFile(String currentFileName) {
         File oldFileName = new File(csvFolderPath + currentFileName);
         File newFileName = new File(csvFolderPath + "bhav.csv");
-        if(oldFileName.renameTo(newFileName)) {
+        if(!oldFileName.renameTo(newFileName)) {
             throw new PPTException("RENAME_UNZIPPED_BHAV_FAILED: "+ oldFileName + " - "+ newFileName);
         }
 
