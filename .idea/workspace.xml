@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_8_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ppt.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavTrigger.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/.~lock.1.xlsx#" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/portfolios/1.xls" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/portfolios/1.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/portfolios/2.xls" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/portfolios/2.xlsx" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/lks/core/BeanConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/lks/BeanConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2_0__insert_equities.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lks/BeanConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/lks/BeanConfiguration.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavDownloadJob.java" afterPath="$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavDownloadJob.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lks/generator/ExcelGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/com/lks/generator/ExcelGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java" afterPath="$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lks/PersonalPortfolioTrackerApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/lks/PersonalPortfolioTrackerApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/lks/PersonalPortfolioTrackerApplicationTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/lks/PersonalPortfolioTrackerApplicationTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1_0__ddl_init.sql" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1_0__ddl_init.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bhav.csv" afterPath="$PROJECT_DIR$/static/bhav.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ppt.iws" />
@@ -33,7 +18,7 @@
     <file path="/CSVParser.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467473484248" ignored="false" />
     <file path="/BhavDownloadJob.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467649046562" ignored="false" />
     <file path="/a.dummy" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467474396823" ignored="false" />
-    <file path="/PersonalPortfolioTrackerApplication.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467649088681" ignored="false" />
+    <file path="/PersonalPortfolioTrackerApplication.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467651798628" ignored="false" />
     <file path="/PortfolioGenerator.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467479286150" ignored="false" />
     <file path="/PersonalPortfolioTrackerApplicationTests.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467637740488" ignored="false" />
     <file path="/fragment.java" changelist="5fef849a-ec7c-400c-a1e2-feb9d694cb2f" time="1467637406058" ignored="false" />
@@ -328,10 +313,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonalPortfolioTrackerApplication.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PersonalPortfolioTrackerApplication.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/PersonalPortfolioTrackerApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="949" selection-end="949" vertical-scroll-proportion="0.32142857">
+            <state line="23" column="105" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="V2_0__insert_equities.sql" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V2_0__insert_equities.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="113357" selection-start="113357" selection-end="113357" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -369,16 +363,16 @@
       <file leaf-file-name="BeanConfiguration.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/BeanConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="5" selection-start="517" selection-end="1233" vertical-scroll-proportion="0.0">
+            <state line="49" column="0" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BhavDownloadJob.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BhavDownloadJob.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavDownloadJob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="10" selection-start="1486" selection-end="1486" vertical-scroll-proportion="0.0">
+            <state line="57" column="29" selection-start="1808" selection-end="1808" vertical-scroll-proportion="0.7048872">
               <folding />
             </state>
           </provider>
@@ -411,9 +405,11 @@
         <option value="$PROJECT_DIR$/src/test/java/com/lks/PersonalPortfolioTrackerApplicationTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lks/generator/ExcelGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavTrigger.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavDownloadJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lks/scraper/NSEBhavScraper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V2_0__insert_equities.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lks/BeanConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lks/PersonalPortfolioTrackerApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavDownloadJob.java" />
       </list>
     </option>
   </component>
@@ -771,6 +767,9 @@
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/db/migration" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.lks" />
     </key>
@@ -1327,13 +1326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/BeanConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="5" selection-start="517" selection-end="1233" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1_0__ddl_init.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="17" selection-start="992" selection-end="992" vertical-scroll-proportion="-9.0">
@@ -1376,16 +1368,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavDownloadJob.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V2_0__insert_equities.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="10" selection-start="1486" selection-end="1486" vertical-scroll-proportion="0.0">
+        <state line="0" column="113357" selection-start="113357" selection-end="113357" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/BeanConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="0" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/PersonalPortfolioTrackerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="949" selection-end="949" vertical-scroll-proportion="0.32142857">
+        <state line="23" column="105" selection-start="934" selection-end="934" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lks/scheduler/BhavDownloadJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="29" selection-start="1808" selection-end="1808" vertical-scroll-proportion="0.7048872">
           <folding />
         </state>
       </provider>

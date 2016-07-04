@@ -47,8 +47,4 @@ public class BeanConfiguration {
         return new BhavDownloadJob();
     }
 
-    @Bean
-    public BhavTrigger getBhavDownloadTrigger() {
-        return new BhavTrigger();
-    }
 }

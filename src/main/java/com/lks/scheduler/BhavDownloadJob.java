@@ -55,7 +55,7 @@ public class BhavDownloadJob {
     PortfolioGenerator portfolioGenerator;
 
 
-    @Scheduled(cron = "0 0/2 * * * ?")
+    @Scheduled(cron = "0 0 16 * * MON-FRI")
     public void execute(){
             nseBhavScraper.scrapeBhavFromNSE();
         Map<String, BhavModel> bhavModelMap = csvParser.parseCSV();
