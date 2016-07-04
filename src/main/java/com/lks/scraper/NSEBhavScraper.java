@@ -1,5 +1,6 @@
 package com.lks.scraper;
 
+import com.lks.core.PPTException;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -13,6 +14,7 @@ import java.text.DateFormat;
 import java.text.DateFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.logging.Logger;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
@@ -26,42 +28,37 @@ import java.util.zip.ZipInputStream;
 public class NSEBhavScraper {
 
     private static final String bhavURL = "https://www.nseindia.com/content/historical/EQUITIES/";
-    private static final String nseBhavUrl = "https://www.nseindia.com/products/content/all_daily_reports.htm";
-    private static final String nseUrl = "https://www.nseindia.com/products";
     private static final String csvFolderPath = "static/";
     private static final String zipFile = "bhav.csv.zip";
 
+    private static Logger logger = Logger.getLogger(NSEBhavScraper.class.getName());
+
     public void scrapeBhavFromNSE(){
 
-        try {
-            //Create bhav download url
-            Calendar calendar = Calendar.getInstance();
-            int year = calendar.get(Calendar.YEAR);
-            String month = getMonthForInt(calendar.get(Calendar.MONTH)).toUpperCase();
-            String date = getDate();
-            String fileNameInUrl = "cm"+date+month+year+zipFile;
-            String downloadURl = bhavURL+year+"/"+month+"/"+fileNameInUrl;
+        logger.info("Entered the method to scrapeBhavFromNSE");
 
+        //Create bhav download url
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        String month = getMonthForInt(calendar.get(Calendar.MONTH)).toUpperCase();
+        String date = getDate();
+        String fileNameInUrl = "cm"+date+month+year+zipFile;
+        String downloadURl = bhavURL+year+"/"+month+"/"+fileNameInUrl;
 
+        logger.info("Initiating download of Bhav from url: "+ downloadURl);
 
-            downloadBhav(downloadURl);
-            File file = unZipIt();
-
-            deleteOldCSVBhavFile();
-            renameUnzippedFile(file.getName());
-
-
-
-        } catch (Exception e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-
+        downloadBhav(downloadURl);
+        File file = unZipIt();
+        deleteOldCSVBhavFile();
+        renameUnzippedFile(file.getName());
     }
 
     private void renameUnzippedFile(String currentFileName) {
         File oldFileName = new File(csvFolderPath + currentFileName);
         File newFileName = new File(csvFolderPath + "bhav.csv");
-        oldFileName.renameTo(newFileName);
+        if(oldFileName.renameTo(newFileName)) {
+            throw new PPTException("RENAME_UNZIPPED_BHAV_FAILED: "+ oldFileName + " - "+ newFileName);
+        }
 
     }
 
@@ -69,7 +66,9 @@ public class NSEBhavScraper {
 
         File file = new File(csvFolderPath + "bhav.csv");
         if(file.exists()) {
-            file.delete();
+            if(!file.delete()){
+                throw new PPTException("DELETE_OLD_BHAV_FAILED");
+            }
         }
 
 
@@ -90,9 +89,11 @@ public class NSEBhavScraper {
             out.close();
             in.close();
         } catch (MalformedURLException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            throw new PPTException("BHAV_FILE_NOT_AVAILABLE : "+ downloadUrl, e);
+        } catch (FileNotFoundException e) {
+            throw new PPTException("BHAV_FILE_NOT_AVAILABLE : "+ downloadUrl, e);
         } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            throw new PPTException("BHAV_FILE_NOT_AVAILABLE : "+ downloadUrl, e);
         }
     }
 
@@ -101,6 +102,8 @@ public class NSEBhavScraper {
      *
      */
     private File unZipIt(){
+
+        logger.info("Entered method to unzip the downloaded bhav file");
 
         byte[] buffer = new byte[1024];
         File unzippedFile = null;
@@ -124,7 +127,7 @@ public class NSEBhavScraper {
                 String fileName = ze.getName();
                 unzippedFile = new File(csvFolderPath + File.separator + fileName);
 
-                System.out.println("file unzip : "+ unzippedFile.getAbsoluteFile());
+                logger.info("file unzip : "+ unzippedFile.getAbsoluteFile());
 
                 //create all non exists folders
                 //else you will hit FileNotFoundException for compressed folder
@@ -143,11 +146,11 @@ public class NSEBhavScraper {
 
             zis.closeEntry();
             zis.close();
+            logger.info("Finished unzipping of the file: "+ unzippedFile);
 
-            System.out.println("Done");
 
         }catch(IOException ex){
-            ex.printStackTrace();
+            throw new PPTException("FAILED_TO_UNZIP_BHAV_FILE: "+ unzippedFile, ex);
         }
         return unzippedFile;
     }

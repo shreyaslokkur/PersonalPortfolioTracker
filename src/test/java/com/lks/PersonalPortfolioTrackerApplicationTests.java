@@ -1,7 +1,7 @@
 package com.lks;
 
 import com.lks.core.BhavModel;
-import com.lks.core.PortfolioGenerator;
+import com.lks.generator.PortfolioGenerator;
 import com.lks.core.PortfolioModel;
 import com.lks.generator.ExcelGenerator;
 import com.lks.models.User;
