@@ -12,6 +12,7 @@ import com.lks.models.dao.InvestmentsDao;
 import com.lks.models.dao.UserDao;
 import com.lks.notifications.EmailNotification;
 import com.lks.parser.CSVParser;
+import com.lks.util.StocksUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.math.BigDecimal;
@@ -60,6 +61,8 @@ public class PortfolioGenerator {
 
         Map<User, List<PortfolioModel>> userInvestmentsMap = new HashMap<User, List<PortfolioModel>>();
 
+        Map<String, Equities> allEquities = StocksUtil.getAllEquities();
+
         for(User user : users) {
             logger.info("Retrieving investments for the user : "+ user.getEmail());
             List<Investments> investmentsList = investmentsDao.findByUserId(user.getId());
@@ -72,14 +75,18 @@ public class PortfolioGenerator {
             PortfolioModel portfolioModel = null;
             for(String isinNumber: averageOfAllInvestments.keySet()) {
                 logger.info("Creating portfolio model for the isin number :" + isinNumber+" for the user: "+ user.getEmail());
-                Equities equitiesDaoByIsinNumber = equitiesDao.findByIsinNumber(isinNumber);
+                Equities equitiesDaoByIsinNumber = allEquities.get(isinNumber);
                 StockAveragedInvestmentModel stockAveragedInvestmentModel = averageOfAllInvestments.get(isinNumber);
                 BhavModel bhavModel = bhavModelMap.get(isinNumber);
                 portfolioModel = new PortfolioModel();
                 //calculate change
-                portfolioModel.setStockName(equitiesDaoByIsinNumber.getNameOfCompany());
+                if(equitiesDaoByIsinNumber != null) {
+                    portfolioModel.setStockName(equitiesDaoByIsinNumber.getNameOfCompany());
+                } else {
+                    portfolioModel.setStockName(bhavModel.getSymbol());
+                }
                 portfolioModel.setChange(calculateChange(bhavModel.getOpen(), bhavModel.getClose()));
-                portfolioModel.setTotalValue(calculateTotal(stockAveragedInvestmentModel.getQuantity(), stockAveragedInvestmentModel.getAveragePrice()));
+                portfolioModel.setTotalValue(calculateTotal(stockAveragedInvestmentModel.getQuantity(), bhavModel.getClose()));
                 portfolioModel.setClosingPrice(bhavModel.getClose());
                 portfolioModel.setDaysGainValue(calculateGainValue(bhavModel.getOpen(), bhavModel.getClose()));
                 portfolioModel.setDaysGainPercentage(calculateGainPercentage(bhavModel.getOpen(), bhavModel.getClose()));

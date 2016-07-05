@@ -2,6 +2,7 @@ package com.lks.models.dao;
 
 import com.lks.models.Equities;
 import com.lks.models.User;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 /**
