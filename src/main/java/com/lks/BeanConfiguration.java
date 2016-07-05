@@ -1,28 +1,21 @@
 package com.lks;
 
-import com.lks.generator.PortfolioGenerator;
 import com.lks.generator.ExcelGenerator;
+import com.lks.generator.PortfolioGenerator;
 import com.lks.notifications.EmailNotification;
 import com.lks.parser.CSVParser;
 import com.lks.scheduler.BhavDownloadJob;
 import com.lks.scraper.NSEBhavScraper;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.scheduling.annotation.EnableScheduling;
 
-import java.util.logging.Logger;
-
-@SpringBootApplication
-@EnableScheduling
-public class PersonalPortfolioTrackerApplication {
-
-    static Logger logger = Logger.getLogger(PersonalPortfolioTrackerApplication.class.getName());
-
-	public static void main(String[] args) {
-        ApplicationContext applicationContext = SpringApplication.run(PersonalPortfolioTrackerApplication.class, args);
-    }
+/**
+ * Created with IntelliJ IDEA.
+ * User: shreyaslokkur
+ * Date: 2/7/16
+ * Time: 9:16 PM
+ * To change this template use File | Settings | File Templates.
+ */
+public class BeanConfiguration {
 
     @Bean
     public CSVParser getCSVParser() {
@@ -53,6 +46,5 @@ public class PersonalPortfolioTrackerApplication {
     public BhavDownloadJob getBhavDownloadJob() {
         return new BhavDownloadJob();
     }
-
 
 }

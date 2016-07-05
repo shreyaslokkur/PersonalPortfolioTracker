@@ -1,11 +1,9 @@
 package com.lks.parser;
 
 import com.lks.core.BhavModel;
+import com.lks.core.PPTException;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,14 +34,11 @@ public class CSVParser {
     public Map<String, BhavModel> parseCSV() {
 
         BufferedReader crunchifyBuffer = null;
-        String line = "";
         String splitBy = ",";
         Map<String,BhavModel> bhavModelMap = new HashMap<String, BhavModel>();
-
+        File csvFile = new File("static/bhav.csv");
         try {
             String crunchifyLine;
-
-            File csvFile = new File("static/bhav.csv");
             crunchifyBuffer = new BufferedReader(new FileReader(csvFile));
 
             //skipLine
@@ -70,8 +65,12 @@ public class CSVParser {
 
             }
 
+        } catch (FileNotFoundException e) {
+            throw new PPTException("UNABLE_TO_FIND_CSV_FILE_FOR_PARSING : "+ csvFile, e);
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new PPTException("FAILED_TO_PARSE_CSV_FILE : "+ csvFile, e);
+        } catch (Exception e) {
+            throw new PPTException("FAILED_TO_PARSE_CSV_FILE : "+ csvFile, e);
         } finally {
             try {
                 if (crunchifyBuffer != null) crunchifyBuffer.close();

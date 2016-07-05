@@ -18,20 +18,52 @@
 
 package com.lks.scheduler;
 
+import com.lks.core.BhavModel;
+import com.lks.core.PortfolioModel;
+import com.lks.generator.ExcelGenerator;
+import com.lks.generator.PortfolioGenerator;
+import com.lks.models.User;
+import com.lks.notifications.EmailNotification;
+import com.lks.parser.CSVParser;
 import com.lks.scraper.NSEBhavScraper;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 
-public class BhavDownloadJob implements Job {
+import java.util.List;
+import java.util.Map;
+
+@Component
+public class BhavDownloadJob {
 
     @Autowired
-    private NSEBhavScraper nseBhavScraper;
+    CSVParser csvParser;
 
-    @Override
-    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-        nseBhavScraper.scrapeBhavFromNSE();
+    @Autowired
+    NSEBhavScraper nseBhavScraper;
+
+    @Autowired
+    EmailNotification emailNotification;
+
+    @Autowired
+    ExcelGenerator excelGenerator;
+
+    @Autowired
+    PortfolioGenerator portfolioGenerator;
+
+
+    @Scheduled(cron = "0 0 16 * * MON-FRI")
+    public void execute(){
+            nseBhavScraper.scrapeBhavFromNSE();
+        Map<String, BhavModel> bhavModelMap = csvParser.parseCSV();
+        Map<User, List<PortfolioModel>> userListMap = portfolioGenerator.generatePortfolioForAllUsers(bhavModelMap);
+        for(User user: userListMap.keySet()) {
+            String fileName = excelGenerator.generateExcel(userListMap.get(user), user);
+            emailNotification.generateAndSendEmail(fileName, userListMap.get(user), user);
+        }
     }
 
 

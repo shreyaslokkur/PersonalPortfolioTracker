@@ -1,5 +1,8 @@
-package com.lks.core;
+package com.lks.generator;
 
+import com.lks.core.BhavModel;
+import com.lks.core.PortfolioModel;
+import com.lks.core.StockAveragedInvestmentModel;
 import com.lks.generator.ExcelGenerator;
 import com.lks.models.Equities;
 import com.lks.models.Investments;
@@ -17,6 +20,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
 /**
  * Created with IntelliJ IDEA.
@@ -45,21 +49,29 @@ public class PortfolioGenerator {
     @Autowired
     EmailNotification emailNotification;
 
+    private static Logger logger = Logger.getLogger(PortfolioGenerator.class.getName());
+
     public Map<User, List<PortfolioModel>> generatePortfolioForAllUsers(Map<String,BhavModel> bhavModelMap) {
 
         //Get all users from the user database
         Iterable<User> users = userDao.findAll();
 
+        logger.info("Retrieved all the users from the database");
+
         Map<User, List<PortfolioModel>> userInvestmentsMap = new HashMap<User, List<PortfolioModel>>();
 
         for(User user : users) {
+            logger.info("Retrieving investments for the user : "+ user.getEmail());
             List<Investments> investmentsList = investmentsDao.findByUserId(user.getId());
+
+            logger.info("Number of investments retrieved for the user: "+ user.getEmail() + " is :" + investmentsList.size());
             //createAverageOfAllInvestments
             Map<String, StockAveragedInvestmentModel> averageOfAllInvestments = createAverageOfAllInvestments(investmentsList);
             List<PortfolioModel> portfolioModelList = new ArrayList<PortfolioModel>();
             userInvestmentsMap.put(user, portfolioModelList);
             PortfolioModel portfolioModel = null;
             for(String isinNumber: averageOfAllInvestments.keySet()) {
+                logger.info("Creating portfolio model for the isin number :" + isinNumber+" for the user: "+ user.getEmail());
                 Equities equitiesDaoByIsinNumber = equitiesDao.findByIsinNumber(isinNumber);
                 StockAveragedInvestmentModel stockAveragedInvestmentModel = averageOfAllInvestments.get(isinNumber);
                 BhavModel bhavModel = bhavModelMap.get(isinNumber);

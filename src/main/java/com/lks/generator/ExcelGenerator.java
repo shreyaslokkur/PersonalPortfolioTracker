@@ -25,6 +25,21 @@ import java.util.*;
  */
 public class ExcelGenerator {
 
+    private static final String portfolioFolder = "static/portfolios/";
+
+    private static final List<Integer> columnsWithGainOrLoss = new ArrayList<Integer>(){{
+        add(new Integer(2));
+        add(new Integer(5));
+        add(new Integer(6));
+        add(new Integer(7));
+        add(new Integer(8));
+    }};
+
+    private static final List<Integer> columnsWithPercentage = new ArrayList<Integer>() {{
+        add(new Integer(6));
+        add(new Integer(8));
+    }};
+
     public String generateExcel(List<PortfolioModel> portfolioModelList, User user) {
         //Create blank workbook
         XSSFWorkbook workbook = new XSSFWorkbook();
@@ -49,20 +64,47 @@ public class ExcelGenerator {
         //Iterate over data and write to sheet
         int rowid = 1;
         Map<String, Object[]> mapOfInvestments = createMapOfInvestments(portfolioModelList);
+
+        Cell cell = null;
         for (String key : mapOfInvestments.keySet())
         {
             row = spreadsheet.createRow(rowid++);
             Object [] objArr = mapOfInvestments.get(key);
             int cellnum = 0;
             for (Object obj : objArr) {
-                Cell cell = row.createCell(cellnum++);
+                cell = row.createCell(cellnum);
                 if(obj instanceof String)
                     cell.setCellValue((String)obj);
-                else if(obj instanceof Double)
-                    cell.setCellValue((Double)obj);
+                else if(obj instanceof Double) {
+                    Double value = (Double) obj;
+                    if(value > 0 && columnsWithGainOrLoss.contains(new Integer(cellnum))) {
+                        cell.setCellStyle(getGainCellStyle(workbook));
+                    } else if(value < 0 && columnsWithGainOrLoss.contains(new Integer(cellnum))) {
+                        cell.setCellStyle(getLossCellStyle(workbook));
+                    }
+
+                    if(columnsWithPercentage.contains(new Integer(cellnum))) {
+                        cell.setCellValue((Double)obj + "%");
+
+
+                    } else {
+                        cell.setCellValue((Double)obj);
+                    }
+
+                }
+
                 else if(obj instanceof Integer) {
+                    Integer value = (Integer) obj;
+                    if(value > 0 && columnsWithGainOrLoss.contains(new Integer(cellnum))) {
+                        cell.setCellStyle(getGainCellStyle(workbook));
+                    } else if(value < 0 && columnsWithGainOrLoss.contains(new Integer(cellnum))) {
+                        cell.setCellStyle(getLossCellStyle(workbook));
+                    }
                     cell.setCellValue((Integer)obj);
                 }
+
+                cellnum++;
+
             }
 
         }
@@ -75,15 +117,18 @@ public class ExcelGenerator {
     }
 
     private String createFile(XSSFWorkbook workbook, User user) {
-        String fileName = "static/portfolios/" + user.getId() + ".xls";
+        File folder = new File(portfolioFolder);
+        if(!folder.exists()) {
+            folder.mkdir();
+        }
+        String fileName = portfolioFolder + user.getId() + ".xls";
         FileOutputStream out = null;
         try {
             out = new FileOutputStream(
                     new File(fileName));
             workbook.write(out);
             out.close();
-            System.out.println(
-                    "Writesheet.xlsx written successfully" );
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         } catch (IOException e) {
@@ -96,18 +141,18 @@ public class ExcelGenerator {
     private void createHeader(XSSFSheet spreadSheet){
 
         XSSFRow row = spreadSheet.createRow(0);
-        CellStyle style=null;
+        CellStyle style=spreadSheet.getWorkbook().createCellStyle();
+        style.setAlignment(CellStyle.ALIGN_CENTER);
+        style.setFont(getFont(spreadSheet.getWorkbook()));
         String[] headers = {"Stock Name", "Closing Price", "Change","Quantity","Invested Price","Day's Gain Value","Day's Gain %","Overall Gain Value","Overall Gain %","Total Value"};
         int cellId = 0;
         for(String headerName : headers) {
             Cell cell = row.createCell(cellId++);
             cell.setCellValue(headerName);
+            cell.setCellStyle(style);
         }
 
-        style=row.getRowStyle();
-        style.setFillPattern(CellStyle.SOLID_FOREGROUND);
-        style.setAlignment(CellStyle.ALIGN_CENTER);
-        style.setFont(getFont(spreadSheet.getWorkbook()));
+
 
 
     }
@@ -141,7 +186,23 @@ public class ExcelGenerator {
         return font;
     }
 
+    private CellStyle getGainCellStyle(XSSFWorkbook workbook){
+        CellStyle style=workbook.createCellStyle();
+        style.setAlignment(CellStyle.ALIGN_CENTER);
+        XSSFFont font= workbook.createFont();
+        font.setColor(IndexedColors.GREEN.getIndex());
+        style.setFont(font);
+        return style;
+    }
 
+    private CellStyle getLossCellStyle(XSSFWorkbook workbook){
+        CellStyle style=workbook.createCellStyle();
+        style.setAlignment(CellStyle.ALIGN_CENTER);
+        XSSFFont font= workbook.createFont();
+        font.setColor(IndexedColors.RED.getIndex());
+        style.setFont(font);
+        return style;
+    }
 
 
 
