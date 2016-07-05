@@ -102,12 +102,15 @@ public class ExcelGenerator {
                     }
                     cell.setCellValue((Integer)obj);
                 }
+                spreadsheet.autoSizeColumn(cellnum);
 
                 cellnum++;
 
             }
 
         }
+
+
         //Write the workbook in file system
 
         String fileName = createFile(workbook, user);
