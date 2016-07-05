@@ -1,0 +1,12 @@
+# Intellij
+.idea/
+*.iml
+
+# Java class files
+*.class
+
+# generated files
+bin/
+
+target/generated-sources/
+target/generated-test-sources/

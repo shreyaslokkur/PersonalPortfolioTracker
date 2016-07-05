@@ -6,6 +6,7 @@ import com.lks.core.PortfolioModel;
 import com.lks.generator.ExcelGenerator;
 import com.lks.models.User;
 import com.lks.notifications.EmailNotification;
+import com.lks.notifications.SMSNotification;
 import com.lks.parser.CSVParser;
 import com.lks.scraper.NSEBhavScraper;
 import org.junit.Assert;
@@ -41,6 +42,9 @@ public class PersonalPortfolioTrackerApplicationTests {
     @Autowired
     PortfolioGenerator portfolioGenerator;
 
+    @Autowired
+    SMSNotification smsNotification;
+
     @Test
     public void testCSVParsing(){
         Map<String,BhavModel> bhavModelMap = csvParser.parseCSV();
@@ -62,6 +66,15 @@ public class PersonalPortfolioTrackerApplicationTests {
         for(User user: userListMap.keySet()) {
             String fileName = excelGenerator.generateExcel(userListMap.get(user), user);
             emailNotification.generateAndSendEmail(fileName, userListMap.get(user), user);
+        }
+    }
+
+    @Test
+    public void testSendSMS() {
+        Map<String, BhavModel> bhavModelMap = csvParser.parseCSV();
+        Map<User, List<PortfolioModel>> userListMap = portfolioGenerator.generatePortfolioForAllUsers(bhavModelMap);
+        for(User user: userListMap.keySet()) {
+            smsNotification.sendSms(userListMap.get(user), user);
         }
     }
 

@@ -1,9 +1,11 @@
 package com.lks.notifications;
 
+import com.lks.PPTManagementProperties;
 import com.lks.core.PortfolioModel;
 import com.lks.models.User;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.text.StrSubstitutor;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
@@ -27,24 +29,24 @@ import java.util.Properties;
  */
 public class EmailNotification {
 
-    String templateHeaderText = "Hi ${userName},\n" +
+    @Autowired
+    private PPTManagementProperties pptManagementProperties;
+
+    private String templateHeaderText = "Hi ${userName},\n" +
             "\n" +
             "Your current networth is Rs ${overallWorth} (+Rs ${overallGain})\n" +
             "\n";
-    String templateGainerText = "Max gainer today is: ${maxGainerShareName} - Rs ${maxGainerSharePrice} (+Rs ${maxGainerDayGain})\n" +
+    private String templateGainerText = "Max gainer today is: ${maxGainerShareName} - Rs ${maxGainerSharePrice} (+Rs ${maxGainerDayGain})\n" +
             "\n";
 
-    String templateLoserText =
+    private String templateLoserText =
             "Max loser today is : ${maxLoserShareName} - Rs ${maxLoserSharePrice} (+Rs ${maxLoserDayLoss})";
-
-    private final String fromUsername = "lksportfoliotracker@gmail.com";
-    private final String password = "mydestiny";
 
     public void generateAndSendEmail(String fileName, List<PortfolioModel> portfolioModelList, User user) {
 
-        MailBodyModel mailBodyModel = createMailBodyModel(portfolioModelList, user);
+        NotificationModel notificationModel = createNotificationModel(portfolioModelList, user);
 
-        String resolvedMailBody = generateEmailBody(mailBodyModel);
+        String resolvedMailBody = generateEmailBody(notificationModel);
 
 
         Properties props = new Properties();
@@ -56,7 +58,7 @@ public class EmailNotification {
         Session session = Session.getInstance(props,
                 new javax.mail.Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(fromUsername, password);
+                        return new PasswordAuthentication(pptManagementProperties.getEmailUsername(), pptManagementProperties.getEmailPassword());
                     }
                 });
 
@@ -66,7 +68,7 @@ public class EmailNotification {
             Message message = new MimeMessage(session);
 
             // Set From: header field of the header.
-            message.setFrom(new InternetAddress(fromUsername));
+            message.setFrom(new InternetAddress(pptManagementProperties.getEmailPassword()));
 
             // Set To: header field of the header.
             message.setRecipients(Message.RecipientType.TO,
@@ -105,10 +107,10 @@ public class EmailNotification {
 
     }
 
-    private MailBodyModel createMailBodyModel(List<PortfolioModel> portfolioModelList, User user) {
+    private NotificationModel createNotificationModel(List<PortfolioModel> portfolioModelList, User user) {
 
-        MailBodyModel mailBodyModel = new MailBodyModel();
-        mailBodyModel.setUserName(user.getFirstName() + " " + user.getLastName());
+        NotificationModel notificationModel = new NotificationModel();
+        notificationModel.setUserName(user.getFirstName() + " " + user.getLastName());
         double overallWorth = 0.0;
         double overallGain = 0.0;
         double maxSharePrice = 0.0;
@@ -135,43 +137,43 @@ public class EmailNotification {
 
         }
 
-        mailBodyModel.setMaxGainerShareName(maxShareName);
-        mailBodyModel.setMaxGainerDayGain(String.valueOf(maxShareDayGain));
-        mailBodyModel.setMaxGainerSharePrice(String.valueOf(maxSharePrice));
+        notificationModel.setMaxGainerShareName(maxShareName);
+        notificationModel.setMaxGainerDayGain(String.valueOf(maxShareDayGain));
+        notificationModel.setMaxGainerSharePrice(String.valueOf(maxSharePrice));
 
-        mailBodyModel.setMaxLoserShareName(minShareName);
-        mailBodyModel.setMaxLoserDayLoss(String.valueOf(minShareDayLoss));
-        mailBodyModel.setMaxLoserSharePrice(String.valueOf(minSharePrice));
+        notificationModel.setMaxLoserShareName(minShareName);
+        notificationModel.setMaxLoserDayLoss(String.valueOf(minShareDayLoss));
+        notificationModel.setMaxLoserSharePrice(String.valueOf(minSharePrice));
 
-        mailBodyModel.setOverallWorth(String.valueOf(overallWorth));
-        mailBodyModel.setOverallGain(String.valueOf(overallGain));
-        return mailBodyModel;
+        notificationModel.setOverallWorth(String.valueOf(overallWorth));
+        notificationModel.setOverallGain(String.valueOf(overallGain));
+        return notificationModel;
     }
 
-    public String generateEmailBody(MailBodyModel mailBodyModel) {
+    private String generateEmailBody(NotificationModel notificationModel) {
         Map<String, String> valuesMap = new HashMap<String, String>();
         String resolvedHeaderString = null;
         String resolvedGainerString = null;
         String resolvedLoserString = null;
-        valuesMap.put("userName", mailBodyModel.getUserName());
-        valuesMap.put("overallWorth", mailBodyModel.getOverallWorth());
-        valuesMap.put("overallGain", mailBodyModel.getOverallGain());
-        valuesMap.put("maxGainerShareName", mailBodyModel.getMaxGainerShareName());
-        valuesMap.put("maxGainerSharePrice", mailBodyModel.getMaxGainerSharePrice());
-        valuesMap.put("maxGainerDayGain", mailBodyModel.getMaxGainerDayGain());
-        valuesMap.put("maxLoserShareName", mailBodyModel.getMaxLoserShareName());
-        valuesMap.put("maxLoserSharePrice", mailBodyModel.getMaxLoserSharePrice());
-        valuesMap.put("maxLoserDayLoss", mailBodyModel.getMaxLoserDayLoss());
+        valuesMap.put("userName", notificationModel.getUserName());
+        valuesMap.put("overallWorth", notificationModel.getOverallWorth());
+        valuesMap.put("overallGain", notificationModel.getOverallGain());
+        valuesMap.put("maxGainerShareName", notificationModel.getMaxGainerShareName());
+        valuesMap.put("maxGainerSharePrice", notificationModel.getMaxGainerSharePrice());
+        valuesMap.put("maxGainerDayGain", notificationModel.getMaxGainerDayGain());
+        valuesMap.put("maxLoserShareName", notificationModel.getMaxLoserShareName());
+        valuesMap.put("maxLoserSharePrice", notificationModel.getMaxLoserSharePrice());
+        valuesMap.put("maxLoserDayLoss", notificationModel.getMaxLoserDayLoss());
         StrSubstitutor sub = new StrSubstitutor(valuesMap);
         resolvedHeaderString = sub.replace(templateHeaderText);
 
-        if(StringUtils.isBlank(mailBodyModel.getMaxGainerShareName())) {
+        if(StringUtils.isBlank(notificationModel.getMaxGainerShareName())) {
             resolvedGainerString = "No gains today";
         } else {
             resolvedGainerString = sub.replace(templateGainerText);
         }
 
-        if(StringUtils.isBlank(mailBodyModel.getMaxLoserShareName())) {
+        if(StringUtils.isBlank(notificationModel.getMaxLoserShareName())) {
             resolvedLoserString = "No loses today";
         } else {
             resolvedLoserString = sub.replace(templateLoserText);
@@ -179,87 +181,5 @@ public class EmailNotification {
         return resolvedHeaderString + resolvedGainerString + resolvedLoserString;
     }
 
-    private static class MailBodyModel{
-        private String userName;
-        private String overallWorth;
-        private String overallGain;
-        private String maxGainerShareName;
-        private String maxGainerSharePrice;
-        private String maxGainerDayGain;
-        private String maxLoserShareName;
-        private String maxLoserSharePrice;
-        private String maxLoserDayLoss;
 
-        private String getUserName() {
-            return userName;
-        }
-
-        private void setUserName(String userName) {
-            this.userName = userName;
-        }
-
-        private String getOverallWorth() {
-            return overallWorth;
-        }
-
-        private void setOverallWorth(String overallWorth) {
-            this.overallWorth = overallWorth;
-        }
-
-        private String getOverallGain() {
-            return overallGain;
-        }
-
-        private void setOverallGain(String overallGain) {
-            this.overallGain = overallGain;
-        }
-
-        private String getMaxGainerShareName() {
-            return maxGainerShareName;
-        }
-
-        private void setMaxGainerShareName(String maxGainerShareName) {
-            this.maxGainerShareName = maxGainerShareName;
-        }
-
-        private String getMaxGainerSharePrice() {
-            return maxGainerSharePrice;
-        }
-
-        private void setMaxGainerSharePrice(String maxGainerSharePrice) {
-            this.maxGainerSharePrice = maxGainerSharePrice;
-        }
-
-        private String getMaxGainerDayGain() {
-            return maxGainerDayGain;
-        }
-
-        private void setMaxGainerDayGain(String maxGainerDayGain) {
-            this.maxGainerDayGain = maxGainerDayGain;
-        }
-
-        private String getMaxLoserShareName() {
-            return maxLoserShareName;
-        }
-
-        private void setMaxLoserShareName(String maxLoserShareName) {
-            this.maxLoserShareName = maxLoserShareName;
-        }
-
-        private String getMaxLoserSharePrice() {
-            return maxLoserSharePrice;
-        }
-
-        private void setMaxLoserSharePrice(String maxLoserSharePrice) {
-            this.maxLoserSharePrice = maxLoserSharePrice;
-        }
-
-        private String getMaxLoserDayLoss() {
-            return maxLoserDayLoss;
-        }
-
-        private void setMaxLoserDayLoss(String maxLoserDayLoss) {
-            this.maxLoserDayLoss = maxLoserDayLoss;
-        }
-    }
 }

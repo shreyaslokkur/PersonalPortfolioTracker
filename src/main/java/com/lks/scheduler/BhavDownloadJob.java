@@ -24,6 +24,7 @@ import com.lks.generator.ExcelGenerator;
 import com.lks.generator.PortfolioGenerator;
 import com.lks.models.User;
 import com.lks.notifications.EmailNotification;
+import com.lks.notifications.SMSNotification;
 import com.lks.parser.CSVParser;
 import com.lks.scraper.NSEBhavScraper;
 import org.quartz.Job;
@@ -54,8 +55,11 @@ public class BhavDownloadJob {
     @Autowired
     PortfolioGenerator portfolioGenerator;
 
+    @Autowired
+    SMSNotification smsNotification;
 
-    @Scheduled(cron = "0 0 16 * * MON-FRI")
+
+    @Scheduled(cron = "0 0 17 * * MON-FRI")
     public void execute(){
             nseBhavScraper.scrapeBhavFromNSE();
         Map<String, BhavModel> bhavModelMap = csvParser.parseCSV();
@@ -63,6 +67,7 @@ public class BhavDownloadJob {
         for(User user: userListMap.keySet()) {
             String fileName = excelGenerator.generateExcel(userListMap.get(user), user);
             emailNotification.generateAndSendEmail(fileName, userListMap.get(user), user);
+            smsNotification.sendSms(userListMap.get(user), user);
         }
     }
 

@@ -3,6 +3,7 @@ package com.lks;
 import com.lks.generator.PortfolioGenerator;
 import com.lks.generator.ExcelGenerator;
 import com.lks.notifications.EmailNotification;
+import com.lks.notifications.SMSNotification;
 import com.lks.parser.CSVParser;
 import com.lks.scheduler.BhavDownloadJob;
 import com.lks.scraper.NSEBhavScraper;
@@ -10,6 +11,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.util.logging.Logger;
@@ -53,6 +55,12 @@ public class PersonalPortfolioTrackerApplication {
     public BhavDownloadJob getBhavDownloadJob() {
         return new BhavDownloadJob();
     }
+
+    @Bean
+    public SMSNotification getSMSNotification() { return new SMSNotification(); }
+
+    @Bean
+    public PPTManagementProperties getPPTManagementProperties() { return new PPTManagementProperties(); }
 
 
 }
