@@ -8,5 +8,7 @@
 # generated files
 bin/
 
-target/generated-sources/
-target/generated-test-sources/
+
+static/portfolios/
+
+target/

@@ -32,10 +32,9 @@ public class EmailNotification {
     @Autowired
     private PPTManagementProperties pptManagementProperties;
 
-    private String templateHeaderText = "Hi ${userName},\n" +
-            "\n" +
-            "Your current networth is Rs ${overallWorth} (+Rs ${overallGain})\n" +
-            "\n";
+    private String templateHeaderText = "<p>Hi <strong>${userName}</strong>,</p> <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">" +
+            "<tbody><tr><td><p>Your current networth is <span style=\"color:#333333;font-size:35px;font-weight:bold;font-style:normal\"> Rs ${overallWorth} (+Rs <span style=\"color:#{overallGainColor};font-size:25px;font-weight:bold;font-style:normal\">${overallGain}</span>)</span></p></td></tr></tbody></table>" ;
+
     private String templateGainerText = "Max gainer today is: ${maxGainerShareName} - Rs ${maxGainerSharePrice} (+Rs ${maxGainerDayGain})\n" +
             "\n";
 
@@ -158,6 +157,11 @@ public class EmailNotification {
         valuesMap.put("userName", notificationModel.getUserName());
         valuesMap.put("overallWorth", notificationModel.getOverallWorth());
         valuesMap.put("overallGain", notificationModel.getOverallGain());
+        if(Integer.parseInt(notificationModel.getOverallGain()) > 0 ) {
+            valuesMap.put("overallGainColor", "#008000");
+        } else {
+            valuesMap.put("overallGainColor", "#de0000");
+        }
         valuesMap.put("maxGainerShareName", notificationModel.getMaxGainerShareName());
         valuesMap.put("maxGainerSharePrice", notificationModel.getMaxGainerSharePrice());
         valuesMap.put("maxGainerDayGain", notificationModel.getMaxGainerDayGain());
