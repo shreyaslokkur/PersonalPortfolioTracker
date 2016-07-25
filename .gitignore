@@ -9,6 +9,6 @@
 bin/
 
 
-static/portfolios/
+static/portfolios/*.xls
 
 target/

@@ -145,7 +145,7 @@ public class PortfolioGenerator {
         return round((quantity * averagePrice), 2);
     }
 
-    public double round(double value, int places) {
+    private double round(double value, int places) {
         if (places < 0) throw new IllegalArgumentException();
 
         BigDecimal bd = new BigDecimal(value);

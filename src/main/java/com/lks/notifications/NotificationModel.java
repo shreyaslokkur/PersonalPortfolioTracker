@@ -24,12 +24,15 @@ public class NotificationModel {
     private String phoneNumber;
     private String overallWorth;
     private String overallGain;
+    private String overallGainPercentage;
     private String maxGainerShareName;
     private String maxGainerSharePrice;
     private String maxGainerDayGain;
+    private String maxGainerDayGainPercentage;
     private String maxLoserShareName;
     private String maxLoserSharePrice;
     private String maxLoserDayLoss;
+    private String maxLoserDayLossPercentage;
 
     public String getUserName() {
         return userName;
@@ -63,6 +66,14 @@ public class NotificationModel {
         this.overallGain = overallGain;
     }
 
+    public String getOverallGainPercentage() {
+        return overallGainPercentage;
+    }
+
+    public void setOverallGainPercentage(String overallGainPercentage) {
+        this.overallGainPercentage = overallGainPercentage;
+    }
+
     public String getMaxGainerShareName() {
         return maxGainerShareName;
     }
@@ -87,6 +98,14 @@ public class NotificationModel {
         this.maxGainerDayGain = maxGainerDayGain;
     }
 
+    public String getMaxGainerDayGainPercentage() {
+        return maxGainerDayGainPercentage;
+    }
+
+    public void setMaxGainerDayGainPercentage(String maxGainerDayGainPercentage) {
+        this.maxGainerDayGainPercentage = maxGainerDayGainPercentage;
+    }
+
     public String getMaxLoserShareName() {
         return maxLoserShareName;
     }
@@ -109,5 +128,13 @@ public class NotificationModel {
 
     public void setMaxLoserDayLoss(String maxLoserDayLoss) {
         this.maxLoserDayLoss = maxLoserDayLoss;
+    }
+
+    public String getMaxLoserDayLossPercentage() {
+        return maxLoserDayLossPercentage;
+    }
+
+    public void setMaxLoserDayLossPercentage(String maxLoserDayLossPercentage) {
+        this.maxLoserDayLossPercentage = maxLoserDayLossPercentage;
     }
 }
