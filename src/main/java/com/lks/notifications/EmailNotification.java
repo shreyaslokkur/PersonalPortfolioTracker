@@ -36,23 +36,23 @@ public class EmailNotification {
     @Autowired
     private PPTManagementProperties pptManagementProperties;
 
-    private String greetingsText = "<p>Hi <strong>${userName}</strong>,</p>";
+    private String greetingsText = "<p><span style=\"color:#646464;font-size:20px;font-family:arial;font-style:normal\">Hi <strong>${userName}</strong>,</span></p>";
 
     private String templateHeaderText = " <p><span style=\"color:#646464;font-size:20px;font-family:arial;font-style:normal\">Your current networth </span><img src=\"${overallGainImage}\" width=\"24\" height=\"24\"> </p>" +
-            "<p><span style=\"color:##444444;font-size:35px;font-weight:bold;font-style:normal\"> Rs ${overallWorth}</span> " +
+            "<p><span style=\"color:#444444;font-size:35px;font-weight:bold;font-style:normal\"> Rs ${overallWorth}</span> " +
             "<span style=\"color:${overallGainColor};font-size:25px;font-weight:bold;font-style:normal\">Rs ${overallGain} (${overallGainPercentage}%)</span></p>"+
             "<hr>";
 
     private String templateGainerText = "<p><span style=\"color:#646464;font-size:20px;font-family:arial;font-style:normal\">Max gainer <span></p>" +
             "<p><span style=\"color:#1e5695;font-size:20px;font-family:arial;font-style:normal; font-weight:bold;\"> ${maxGainerShareName} </span><img src=\"https://s32.postimg.org/4u5opm0ol/1469482066_go_up.png\" width=\"24\" height=\"24\"> </p>" +
-            "<p><span style=\"color:##444444;font-size:16px;font-weight:bold;font-style:normal\"> Rs ${maxGainerSharePrice} </span></p>" +
+            "<p><span style=\"color:#444444;font-size:16px;font-weight:bold;font-style:normal\"> Rs ${maxGainerSharePrice} </span></p>" +
             "<p><span style=\"color:#008000;font-size:14px;font-weight:bold;font-style:normal\">Rs ${maxGainerDayGain} (${maxGainerDayGainPercentage}%)</span></p>"+
             "<hr>";
 
 
     private String templateLoserText = "<p><span style=\"color:#646464;font-size:24px;font-family:arial;font-style:normal\">Max Loser </span></p>" +
             "<p><span style=\"color:#1e5695;font-size:20px;font-family:arial;font-style:normal; font-weight:bold;\"> ${maxLoserShareName} </span><img src=\"https://s31.postimg.org/o82gn80jf/1469483895_down_arrow.png\" width=\"24\" height=\"24\"> </p>" +
-            "<p><span style=\"color:##444444;font-size:16px;font-weight:bold;font-style:normal\"> Rs ${maxLoserSharePrice}</span></p> " +
+            "<p><span style=\"color:#444444;font-size:16px;font-weight:bold;font-style:normal\"> Rs ${maxLoserSharePrice}</span></p> " +
             "<p><span style=\"color:#de0000;font-size:14px;font-weight:bold;font-style:normal\">Rs ${maxLoserDayLoss} (${maxLoserDayLossPercentage}%)</span></p>";
 
     public void generateAndSendEmail(String fileName, List<PortfolioModel> portfolioModelList, User user) {
@@ -91,10 +91,10 @@ public class EmailNotification {
             message.setSubject("Portfolio Tracker");
 
             // Create the message part
-            BodyPart messageBodyPart = new MimeBodyPart();
+            MimeBodyPart messageBodyPart = new MimeBodyPart();
 
             // Now set the actual message
-            messageBodyPart.setText(resolvedMailBody);
+            messageBodyPart.setContent(resolvedMailBody,"text/html; charset=utf-8");
 
             // Create a multipar message
             Multipart multipart = new MimeMultipart();
@@ -103,11 +103,11 @@ public class EmailNotification {
             multipart.addBodyPart(messageBodyPart);
 
             // Part two is attachment
-            messageBodyPart = new MimeBodyPart();
+            MimeBodyPart attachementBodyPart = new MimeBodyPart();
             DataSource source = new FileDataSource(fileName);
-            messageBodyPart.setDataHandler(new DataHandler(source));
-            messageBodyPart.setFileName(fileName);
-            multipart.addBodyPart(messageBodyPart);
+            attachementBodyPart.setDataHandler(new DataHandler(source));
+            attachementBodyPart.setFileName(fileName);
+            multipart.addBodyPart(attachementBodyPart);
 
             // Send the complete message parts
             message.setContent(multipart);
@@ -158,6 +158,8 @@ public class EmailNotification {
         }
 
         overallGainPercentage = round(((overallGain / overallInvestedPrice) * 100),2);
+        overallGain = round(overallGain, 2);
+        overallWorth = round(overallWorth, 2);
 
         notificationModel.setMaxGainerShareName(maxShareName);
         notificationModel.setMaxGainerDayGain(String.valueOf(maxShareDayGain));
